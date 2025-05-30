@@ -1,7 +1,7 @@
 # New small regular graphs of given girth: the cage problem and beyond
 
-This repository contains code and data related to the manuscript "New small regular graphs of given girth: the cage problem and beyond". 
-Code can be found in the `src` directory, and data in the `data` directory.
+This repository contains the code and data related to the manuscript "New small regular graphs of given girth: the cage problem and beyond". 
+Code can be found in the `src` directory, while data is available in the `data` directory.
 
 The following notation will be used:
 - $(k,g)$-graph: A $k$-regular graph with girth $g$
@@ -27,9 +27,9 @@ data/
 
 The groups subdirectory contains all non-isomorphic groups of order 1 to 50 with up to 2000 automorphisms for each group.
 
-The graphs subdirectory contains all graphs stored in graph6 format found in the manuscript
+The graphs subdirectory contains all graphs stored in graph6 format mentioned in the manuscript.
 
-They are organized by type and use the following naming convention:
+They are organized by type and use the following naming conventions:
 - `cage`: Small $(k,g)$-graphs where `nW_kX_gY.g6` denotes a file containing $(X,Y)$-graphs with $W$ vertices.
 - `egr`: Small $(k,g,\lambda_e)$-graphs where `nW_kX_gY_lZ.g6` denotes a file containing $(X,Y,Z)$-graphs with $W$ vertices.
 - `kgnogpo`: Small $(k,g,\underline{g+1})$-graphs where `nW_kX_gY.g6` denotes a file containing $(X,Y,\underline{Y+1})$-graphs with $W$ vertices.
@@ -38,13 +38,13 @@ They are organized by type and use the following naming convention:
 
 ## Code
 The `src` directory contains multiple files and subdirectories. 
-The `src/GAP` subdirectory contains GAP code to generate the groups including their automorphisms.
+The `src/GAP` subdirectory contains GAP code that can generate the files containing groups and automorphisms used to construct lifts.
 The `src/nautyAndMultigraph` subdirectory contains slightly modified versions of the Nauty library and the generator multigraph.
 
-The remaining code revolves around generating lifts to obtain $k$-regular graphs achieving some minimum girth. 
+The remaining code revolves around constructing lifts to obtain $k$-regular graphs achieving a given minimum girth. 
 It can be compiled from the top-level directory using the following commands:
 ```bash
-cmake
+cmake CMakeLists.txt
 make
 ```
 
@@ -52,7 +52,7 @@ The executables are available under the `bin` directory, but should be executed 
 ```bash
 . ./run.sh <partition> <modulo> <n> <k> <groupMin> <groupMax> <minGirth>
 ```
-This will construct all non-isomorphic lifts achieving the given `minGirth` using $k$-regular multigraphs on $n$ vertices with loops and semi-edges 
+This will construct all non-isomorphic lifts achieving the given `minGirth` using all possible $k$-regular multigraphs on $n$ vertices with loops and semi-edges as base graph
 and groups with order between `groupMin` and `groupMax` (inclusive). The parameters `partition` and `modulo` can be used to evenly split the base graphs over multiple invocations.
 
 For example, to construct all lifts with girth at least 5 using 3-regular base graphs on 2 vertices 
@@ -135,13 +135,12 @@ Done in 0ms.
 Total runtime: 1ms.
 ```
 
-The following types of lines are written to standard output:
+The following types of lines are written to cout:
 
 - `(k,g)-graph - <k> <g> <n> - graph6`: A $(k,g)$-graph with $n$ vertices and the given graph6 encoding.
 - `egr-graph - <k> <g> <lambda_e> <n> - graph6`: An $(k,g,\lambda_e)$-graph with $n$ vertices and the given graph6 encoding.
 - `vgr-graph - <k> <g> <lambda_v> <n> - graph6`: A $(k,g,\lambda_v)$-graph with $n$ vertices and the given graph6 encoding.
 - `(k,g,g+1)-graph - <k> <g> <n> - graph6`: A $(k,g,\underline{g+1})$-graph with $n$ vertices and the given graph6 encoding.
 
-The remaining text is written to standard error. 
-The output is filtered up to isomorphism, so the same graph will be written at most 4 times (once for each type of graph).
-Note that the invocation above correctly finds the Petersen graph as a lift of the dumbbell graph.
+The remaining text is written to clog. 
+The output is filtered up to isomorphism, so the same graph will be written at most 4 times (once for each type).
