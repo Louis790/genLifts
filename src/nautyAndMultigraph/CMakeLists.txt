@@ -1,0 +1,26 @@
+add_library(nautyAndMultigraph
+        multigraph.h
+        multigraph.c
+        nauty.h
+        nauty.c
+        naututil.h
+        naututil.c
+        nautinv.h
+        nautinv.c
+        nausparse.h
+        nausparse.c
+        gutils.h
+        gutil2.c
+        gutil1.c
+        gtools.h
+        gtools.c
+        labelg.h
+        labelg.c
+        nautil.h
+        nautil.c
+        gtnauty.h
+        gtnauty.c
+        naugraph.h
+        naugraph.c
+        rng.c
+)
