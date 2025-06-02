@@ -42,7 +42,7 @@ The `src/GAP` subdirectory contains GAP code that can generate the files contain
 The `src/nautyAndMultigraph` subdirectory contains slightly modified versions of the Nauty library and the generator multigraph.
 
 The remaining code revolves around constructing lifts to obtain $k$-regular graphs achieving a given minimum girth. 
-It can be compiled from the top-level directory using the following commands:
+It can be compiled from the top-level directory using the following commands (tested with GCC 11.4):
 ```bash
 cmake CMakeLists.txt
 make
