@@ -2616,7 +2616,7 @@ void belegevert(vertauschung vert[], int maxvalence)
 /*********LAST*BUT*NOT*LEAST:****************MAIN***********************/
 
 struct multigraph_result run_multigraph_gen(int argc, char** argv){
-    int i, j, system();
+    int i, j;
     FILE* fil;
     char strpuf[60];
     struct tms TMS;
