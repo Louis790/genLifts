@@ -1,6 +1,8 @@
 #ifndef GRAPHREADER_H
 #define GRAPHREADER_H
 
+#include <iostream>
+
 using std::string;
 using std::vector;
 using std::size;
