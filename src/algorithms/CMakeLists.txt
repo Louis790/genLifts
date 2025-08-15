@@ -1,0 +1,18 @@
+add_library(Algorithms
+        BTA.cpp
+        BTA.h
+        Helpers/Lift.cpp
+        Helpers/Lift.h
+        Helpers/VertexEdgeGirthRegular.h
+        Helpers/VertexEdgeGirthRegular.cpp
+        Helpers/CostFunctions.cpp
+        Helpers/CostFunctions.h
+        Helpers/Other.h
+        Helpers/Other.cpp
+        Helpers/RNG.cpp
+        Helpers/RNG.h
+        TabuSearch.h
+        TabuSearch.cpp
+        Filter.h
+        Filter.cpp
+)
