@@ -25,7 +25,7 @@ data/
 └── └── vgr.zip
 ```
 
-The groups subdirectory contains all non-isomorphic groups of order 1 to 50 with up to 2000 automorphisms for each group.
+The groups subdirectory contains all non-isomorphic groups of order 1 to 50 with up to 1000 automorphisms for each group.
 
 The graphs subdirectory contains all graphs stored in graph6 format mentioned in the manuscript.
 
@@ -207,7 +207,7 @@ The following command will then create a file with these groups:
 To now construct all lifts with girth at least 5 using 3-regular base graphs on 2 vertices
 and cyclic groups with up to 10 elements, you can run the following command:
 ```bash 
-. ./run.sh 0 1 2 3 1 5 5 0 ./cyclic_groups_1-50.txt
+. ./run.sh 0 1 2 3 1 10 5 0 ./cyclic_groups_1-50.txt
 ```
 
 Note that group files are assumed to contain groups sorted by their order.
