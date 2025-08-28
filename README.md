@@ -55,9 +55,9 @@ The executables are available under the `bin` directory, but should be executed 
 ```bash
 . ./run.sh <partition> <modulo> <n> <k> <groupMin> <groupMax> <minGirth> <pureGraph6> <Optional:groupfile>
 ```
-This will construct all non-isomorphic lifts achieving the given `minGirth` using all possible $k$-regular multigraphs on $n$ vertices with loops and semi-edges as base graph
+This will construct all non-isomorphic connected lifts achieving the given `minGirth` using all possible $k$-regular multigraphs on $n$ vertices with loops and semi-edges as base graph
 and groups with order between `groupMin` and `groupMax` (inclusive). The parameters `partition` and `modulo` can be used to evenly split the base graphs over multiple invocations.
-The `pureGraph6` parameter can be set to 1 to only output the graph6 encoding of the resulting graphs, or 0 to also output additional information each found graph.
+The `pureGraph6` parameter can be set to 1 to only output the graph6 encoding of the resulting graphs, or 0 to also output additional information for each found graph.
 The `groupfile` parameter can be used to specify a file containing groups to use instead of the default groups.
 
 For example, to construct all lifts with girth at least 5 using 3-regular base graphs on 2 vertices 
