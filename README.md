@@ -1,6 +1,6 @@
 # New small regular graphs of given girth: the cage problem and beyond
 
-This repository contains the code and data related to the manuscript "New small regular graphs of given girth: the cage problem and beyond". 
+This repository contains the code and data related to the Master's dissertation "Algoritmes voor reguliere lifts van grafen: het cage probleem en varianten" available at [https://kuleuven.limo.libis.be/discovery/fulldisplay?docid=alma9995771928401488&context=L&vid=32KUL_KUL:KULeuven&search_scope=All_Content&tab=all_content_tab&lang=en](Limo Libis). For the repository about the manuscript "New small regular graphs of given girth: the cage problem and beyond", please visit [https://github.com/AGT-Kulak/smallRegGirthGraphs](The following GitHub Repository). 
 Code can be found in the `src` directory, while data is available in the `data` directory.
 
 The following notation will be used:
